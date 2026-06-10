@@ -33,9 +33,3 @@ console.log(typeof true); // boolean
 console.log(typeof null); // object (this is a known quirk in JavaScript)
 console.log(typeof undefined); // undefined
 
-const person = {
-  name: "Alice",
-  age: 30
-};
-console.log(person);
-
