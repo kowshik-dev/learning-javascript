@@ -1,3 +1,16 @@
+// Example of a comment in JavaScript
+// This is a single-line comment
+
+/* This is a multi-line comment
+   that spans multiple lines */
+
+// Example of a console log statement
+console.log("Hello, World!"); // This will print "Hello, World!" to the console
+
+// Example of a variable declaration and assignment
+let name = "Alice";
+console.log(name); // This will print "Alice" to the console
+
 // Example of typeof operator
 console.log(typeof 42); // number
 console.log(typeof 3.14); // number
