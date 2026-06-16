@@ -25,3 +25,20 @@ if (age1 >= 18) {
     console.log("You are a minor.");
 }
 
+// NastedCondition (Condition inside condition)
+let age2 =18;
+
+if (age2 <=18) {
+
+    if (age2 >=13) {
+        console.log("Cannot access");
+    }
+
+    else {
+        console.log("You are a child.");
+    }
+}
+
+else {
+    console.log("You are an adult.");
+}
