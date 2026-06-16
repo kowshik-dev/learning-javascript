@@ -57,9 +57,9 @@ console.log(score); // 20
 
 // Example of a constant variable
 const PI = 3.14159;
-console.log(PI); // 3.14159
-PI = 3.14; // This will cause an error because PI is a constant
-console.log(PI); // This line will not be executed due to the error above
+// console.log(PI); // 3.14159
+// PI = 3.14; // This will cause an error because PI is a constant
+// console.log(PI); // This line will not be executed due to the error above
 
 // Example of arithmetic operations
 console.log(5 + 3); // Addition
@@ -88,5 +88,70 @@ console.log(true && false); // false
 console.log(true || false); // true
 console.log(!true); // false    
 
+//Example of truthy and falsy values
+console.log(Boolean(0)); // false
+console.log(Boolean("")); // false
+console.log(Boolean(null)); // false
+console.log(Boolean(undefined)); // false
+console.log(Boolean(false)); // false
+console.log(Boolean(true)); // true
+console.log(Boolean(1)); // true
+console.log(Boolean("hello")); // true
+console.log(Boolean([])); // true
+console.log(Boolean({})); // true      
 
+//Example of if-else statement
+let number = 10;  
+if (number > 0) {
+    console.log("The number is positive.");
+} else if (number < 0) {
+    console.log("The number is negative.");
+} else {
+    console.log("The number is zero.");
+}  
 
+// Example 2
+let XM = false;
+if (XM) {
+   console.log("XM is true.");
+} else {
+   console.log("XM yet to come.")
+}
+
+// Example 3
+let temparature = 25;
+if (temparature > 30){
+   console.log("It's a hot day.");
+}
+else{
+   console.log("It's a cold day.");
+}
+
+// Example 3
+let age1 = 18;
+if (age1 >= 18) {
+    console.log("You are an adult.");
+} else {
+    console.log("You are a minor.");
+}
+
+// Example of a switch statement
+let color = "red";
+
+switch (color) {
+   
+   case "Green":
+      console.log("The color is green");
+      break;
+
+   case "pink":
+      console.log("The color is pink");
+      break;
+
+   case "red":
+      console.log("The color is red");
+      break;
+
+   default:
+      console.log("Unknown color");   
+}
