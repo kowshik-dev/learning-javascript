@@ -139,7 +139,7 @@ if (age1 >= 18) {
 let color = "red";
 
 switch (color) {
-   
+
    case "Green":
       console.log("The color is green");
       break;
@@ -154,4 +154,23 @@ switch (color) {
 
    default:
       console.log("Unknown color");   
+}
+
+// Example 2
+let score1 = 33;
+switch (true){
+
+   case (score1 >=90):
+      console.log("Grade A+");
+      break;
+
+   case (score1 >=80 && score1 <90):
+      console.log("Grade A");
+      break;
+      
+   case (score1 >=70 && score1 <80):
+      console.log("Grade B");
+      break;
+   default:
+      console.log("Which is my Result.");
 }
