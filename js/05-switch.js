@@ -1,4 +1,4 @@
-// Example of a switch statement
+// Example 1
 let color = "red";
 
 switch (color) {
@@ -20,18 +20,18 @@ switch (color) {
 }
 
 // Example 2
-let score = 33;
+let marks = 33;
 switch (true){
 
-   case (score >=90):
+   case (marks >=90):
       console.log("Grade A+");
       break;
 
-   case (score >=80 && score <90):
+   case (marks >=80 && marks <90):
       console.log("Grade A");
       break;
       
-   case (score >=70 && score <80):
+   case (marks >=70 && marks <80):
       console.log("Grade B");
       break;
    default:

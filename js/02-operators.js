@@ -16,8 +16,8 @@ console.log(x / y);  // 3.3333... (Division)
 console.log(x % y);  // 1    (modulus/Remainder)
 
 // Example of compound assignment operators
-let x = 10;
-x += 5; // x is now 15
+let z = 10;
+z += 5; // z is now 15
 let remainder = 10 % 3; // remainder is 1
 let count = 5;
 count += 1; // count is now 6
