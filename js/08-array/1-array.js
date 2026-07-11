@@ -71,3 +71,68 @@ const foreignPlayers = ["Alex", "Diego"];
 const team = localPlayers.concat(foreignPlayers);
 
 console.log(team.toString());  //Rafi,Nayeem,Alex,Diego
+
+//flat()
+const routes = [
+  ["Dhaka", "Chattogram"],
+  ["Sylhet", "Rajshahi"]
+];
+
+console.log(routes.flat());  //[ 'Dhaka', 'Chattogram', 'Sylhet', 'Rajshahi' ]
+
+//splice()
+const devices = ["Laptop", "Tablet", "Camera", "Printer"];
+devices.splice(1, 2);
+
+console.log(devices);
+
+//toSplice
+const cities = ["Dhaka", "Khulna", "Sylhet", "Rajshahi"];
+const updatedCities = cities.toSpliced(1, 2);
+
+console.log(updatedCities);  //[ 'Dhaka', 'Rajshahi' ]
+console.log(cities);  //[ 'Dhaka', 'Khulna', 'Sylhet', 'Rajshahi' ]
+
+//slice()
+const tickets = ["A1","A2","A3","A4","A5"];
+const selectedTickets = tickets.slice(2,4);
+
+console.log(selectedTickets);  //[ 'A3', 'A4' ]
+console.log(tickets);  //[ 'A1', 'A2', 'A3', 'A4', 'A5' ]
+
+//practice0
+const deliveries = ["order-101","order-102","order-103","order-104"];
+    deliveries.shift();
+    deliveries.unshift("urgent-500");
+    
+    console.log(deliveries);  //[ 'urgent-500', 'order-102', 'order-103', 'order-104' ]
+
+//practice1
+const exhibits = [
+  "Ancient Coin",
+  "Plastic Toy",
+  "Royal Sword"
+];
+    exhibits.splice(1,1,"Clay Pot");
+    console.log(exhibits);
+
+//practice2
+const checklist = [
+  "Check Oxygen",
+  "Bring Umbrella",
+  "Start Engine"
+];
+const updateList = checklist.toSpliced(1,1,"Check Fuel");
+    console.log(checklist);
+    console.log(updateList);
+
+//practice3
+const signals = [
+  "Signal-A",
+  "Signal-B",
+  "Signal-C",
+  "Signal-D",
+  "Signal-E"
+];
+const selectedSignals = signals.slice(1,4);
+console.log(selectedSignals);
