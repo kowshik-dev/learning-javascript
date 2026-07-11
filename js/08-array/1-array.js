@@ -114,7 +114,7 @@ const exhibits = [
   "Royal Sword"
 ];
     exhibits.splice(1,1,"Clay Pot");
-    console.log(exhibits);
+    console.log(exhibits); //[ 'Ancient Coin', 'Clay Pot', 'Royal Sword' ]
 
 //practice2
 const checklist = [
@@ -123,8 +123,8 @@ const checklist = [
   "Start Engine"
 ];
 const updateList = checklist.toSpliced(1,1,"Check Fuel");
-    console.log(checklist);
-    console.log(updateList);
+    console.log(checklist);  //[ 'Check Oxygen', 'Bring Umbrella', 'Start Engine' ]
+    console.log(updateList);  //[ 'Check Oxygen', 'Check Fuel', 'Start Engine' ]
 
 //practice3
 const signals = [
@@ -135,4 +135,4 @@ const signals = [
   "Signal-E"
 ];
 const selectedSignals = signals.slice(1,4);
-console.log(selectedSignals);
+console.log(selectedSignals);  //[ 'Signal-B', 'Signal-C', 'Signal-D' ]
