@@ -17,15 +17,8 @@ else{
    console.log("It's a cold day.");
 }
 
-// Example of an if-else-if statement
-let age1 = 18;
-if (age1 >= 18) {
-    console.log("You are an adult.");
-} else {
-    console.log("You are a minor.");
-}
 
-// NastedCondition (Condition inside condition)
+// NestedCondition (Condition inside condition)
 let age2 =18;
 
 if (age2 <=18) {
@@ -42,3 +35,4 @@ if (age2 <=18) {
 else {
     console.log("You are an adult.");
 }
+

@@ -36,4 +36,9 @@ switch (true){
       break;
    default:
       console.log("Which is my Result.");
-}
+};
+const product = {
+    name: toyota,
+    price: 100,
+    inStck: true,
+};
