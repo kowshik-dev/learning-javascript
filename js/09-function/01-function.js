@@ -111,4 +111,12 @@ console.log(result);
 // Store the returned message in a variable.
 // Print that variable.
 
+const checkBattery = function (batteryLevel){
+  if (batteryLevel >= 20){
+    return "Battery level is safe";
+  } else {return "Charge your device";
+  }
+};
 
+const check = checkBattery(15);
+console.log(check);
