@@ -136,3 +136,8 @@ const signals = [
 ];
 const selectedSignals = signals.slice(1,4);
 console.log(selectedSignals);  //[ 'Signal-B', 'Signal-C', 'Signal-D' ]
+
+//splice()     → changes the original array
+//toSpliced()  → creates a new array
+//slice()      → copies a selected section
+//copyWithin() → copies items inside the same array
