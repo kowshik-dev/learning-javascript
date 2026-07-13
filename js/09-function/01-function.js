@@ -277,3 +277,68 @@ const getLaunchStatus = () => "Rocket is ready";
 const launchStatus = getLaunchStatus();
 console.log(launchStatus);
 
+//Task 2
+
+// Create a zero-parameter arrow function named getVaultStatus.
+// It should automatically return:
+// Vault is secure
+
+const getVaultStatus = () => "Vault is secure";
+const situation = getVaultStatus();
+console.log(situation);
+
+
+//Task 3 Harder Arrow Function Challenge
+
+//Create an arrow function named calculateDeliveryCharge with two parameters:
+// distance
+// isExpress
+
+// Rules:
+// If distance <= 0, return "Invalid distance".
+// The starting delivery charge is 50.
+// For every kilometre above 10, add 10.
+// If isExpress is true, add another 80.
+// Return the final charge.
+
+// Test it with:
+// calculateDeliveryCharge(5, false);  // 50
+// calculateDeliveryCharge(14, true);  // 170
+// calculateDeliveryCharge(0, true);   // "Invalid distance"
+
+//First try
+// const calculateDeliveryCharge = (distance, isExpress) => {
+//   if(distance <= 0){
+//     return "Invalid distance";
+//   } if(distance > 10){
+//     return distance + 10;
+//   } if(isExpress = true){
+//     return distance * 80;
+//   }
+// };
+// const finalCharge = calculateDeliveryCharge(5, false);
+// console.log(finalCharge);
+
+//Second try
+// const calculateDeliveryCharge = (distance, isExpress) => {
+//   if(distance <= 0){
+//     return "Invalid distance"
+//   }
+
+//   let charge = 50;
+
+//   if(distance > 10){
+//     charge = charge + 10;
+//   }
+
+//   if(isExpress){
+//     charge = charge + 80;
+//   }
+
+//   return charge;
+// };
+
+// const finalCharge = calculateDeliveryCharge(14, true);
+// console.log(finalCharge);
+
+//Third Try
