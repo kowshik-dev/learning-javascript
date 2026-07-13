@@ -57,12 +57,64 @@ function calculatePower(voltage, current){
 const power = calculatePower(220,5);
 console.log(`${power} watts`);
 
+//task 3
+// Call with 800 and 3
+// Store the result in totalInternetCost
+// Print: Total internet cost: 2400 BDT
+
+function calculateInternetCost(monthlyCost, months) {
+  return monthlyCost * months;
+}
+const totalInternetCost = calculateInternetCost(800, 3);
+console.log(`Total internet cost: ${totalInternetCost} BDT`);
+
+//Task 3
+// Create a regular function named calculatePrintingCost.
+
+// It should:
+// accept numberOfPages and costPerPage
+// return the total cost
+// call the function with 80 pages and 3 BDT per page
+// store the returned result
+// print:
+
+function calculatePrintingCost(numberOfPages, costPerPage) {
+  return numberOfPages * costPerPage;
+}
+
+const cost = calculatePrintingCost(80, 3);
+console.log(`Total printing cost: ${cost} BDT`);
+
+//Task 4
+// Regular Function — Combination Challenge
+
+// Create a regular function named checkExamResult.
+// Requirements:
+// Accept marks as a parameter.
+// If marks are 50 or higher, return "Passed".
+// Otherwise, return "Failed".
+// Call the function with 72.
+// Store the returned result in a variable.
+// Print: Exam result: Passed
+
+function checkExamResult (marks){
+  if( marks >= 50 ){
+    return "Passed";
+  } else {
+    return "Failed"
+  }
+}
+
+const checkResult = checkExamResult(72);
+console.log(`Exam result: ${checkResult}`);
+
+
 //Anonymous Function
 //Task 1
 // Call the function with "BD-9087"
-const checkPassport = function (passportNumber) {
+function checkPassport(passportNumber) {
   console.log(`Passport ${passportNumber} is valid`);
-};
+}
 checkPassport("BD-9087");
 
 //Task 2 
@@ -92,14 +144,15 @@ checkBoardingPass("Nadia", 7);
 const checkBudget = function(budget, itemPrice){
 
   if (budget >= itemPrice){
-    return "You can buy it"
-  } else { return "Not enough money"
+    return "You can buy it";
+  } else { return "Not enough money";
   }
 };
 
 const result = checkBudget(1500, 1200);
 console.log(result);
 
+//Task 4
 // Final Anonymous Function Challenge
 
 // Create an anonymous function named checkBattery.
@@ -120,3 +173,78 @@ const checkBattery = function (batteryLevel){
 
 const check = checkBattery(15);
 console.log(check);
+
+
+//Arrow Function
+
+//Task 1
+
+// Call with 250 and 4
+// Store the result in totalMealCost
+// Print: Total meal cost: 1000 BDT
+
+const calculateMealCost = (mealPrice, numberOfMeal) => {
+  return mealPrice * numberOfMeal;
+};
+
+const totalMealCost = calculateMealCost(250, 4);
+console.log(`Total meal cost ${totalMealCost} BDT`);
+
+
+// Task 2 — Independent Practice
+
+// Create an arrow function named calculateParkingFee.
+// Requirements:
+// Accept hours and feePerHour.
+// Return the total parking fee.
+// Call it with 6 hours and 50 BDT per hour.
+// Store the returned result.
+// Print:
+
+const calculateParkingFee = (hours, feePerHour) => {
+  return hours * feePerHour;
+};
+
+const totalFee = calculateParkingFee(6, 50);
+console.log(`Total parking fee: ${totalFee} BDT`);
+
+//Task 3 Arrow Function — Combination Challenge
+
+// Create an arrow function named checkAltitude.
+// Requirements:
+// Accept altitude as a parameter.
+// If altitude is 3000 or higher, return "High altitude warning".
+// Otherwise, return "Altitude is safe".
+// Call it with 3500.
+// Store and print the returned result.
+
+const checkAltitude = (altitude) => {
+  if( altitude >= 3000 ) {
+    return "High altitude warning"
+  } else { return "Altitude is safe"
+  }
+};
+
+const checkingResult = checkAltitude(3500);
+console.log(checkingResult);
+
+//Arrow Function: Implicit Return  
+//when func contain onle 1 expression,
+//remove //{}
+//remove //return (keyword)
+
+
+
+//Task 1 — Independent Practice
+
+// Create an implicit-return arrow function named calculateSolarEnergy.
+// It should:
+// accept panelOutput and hours
+// multiply them
+// return the result automatically
+// call it with 300 and 5
+// store and print the result as:
+
+const calculateSolarEnargy = (panelOutput, hours) => panelOutput * hours;
+const reportOfEnergy = calculateSolarEnargy(300, 5);
+console.log(`Total energy: ${reportOfEnergy}`);
