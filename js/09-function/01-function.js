@@ -248,3 +248,32 @@ console.log(checkingResult);
 const calculateSolarEnargy = (panelOutput, hours) => panelOutput * hours;
 const reportOfEnergy = calculateSolarEnargy(300, 5);
 console.log(`Total energy: ${reportOfEnergy}`);
+
+
+//Arrow Function Topic: One Parameter
+
+//Task 1
+
+// Create the shortest valid arrow function named convertDaysToHours.
+// It should:
+// accept one parameter: days
+// return days * 24
+// call it with 7
+// store and print the result.
+
+const convertDaysToHours = days => days * 24;
+const convertValue = convertDaysToHours(7);
+console.log(convertValue);
+
+//Arrow Function with Zero Parameters
+
+//Task 1
+const getLaunchStatus = () => "Rocket is ready";
+
+// Call the function
+// Store its result in launchStatus
+// Print launchStatus
+
+const launchStatus = getLaunchStatus();
+console.log(launchStatus);
+
