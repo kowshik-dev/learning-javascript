@@ -442,3 +442,50 @@ const baseSAlary = calculateBaseSAlary(1000, 20);
 const finalSelary = calculateSalaryWithBonus();
 console.log(baseSAlary);
 console.log(finalSalary)
+
+
+//Function Scoop
+//Local Scope
+
+//Task 1 
+const showStatus = () => {         //body start //() er pore nicher return ekhane ashbe.
+  const status = "System Online";  //localScoop create korlam inside body
+  return status;                   //{body} theke ber korte return korlam //return value {body} er bahire jabe function () nicher tay; 
+};                                 //body end
+
+const finalStatus = showStatus();  //return value inSide the fnction now also () call the funtion
+console.log(finalStatus);
+
+//Task 2
+const createMessage = () => {
+  const localMessage = "Mission ready";
+  return localMessage;
+};
+
+const outsideMessage = createMessage();
+console.log(outsideMessage);
+
+//Task 3
+
+// Create an arrow function named getAccessCode.
+// Inside it:
+// Create a local variable named accessCode
+// Store "AX-204" in it
+// Return it
+// Outside the function:
+// Call the function
+// Store the returned value in savedCode
+// Print savedCode
+
+const getAccessCode = () => {
+  const accessCode = "AX-204";
+  return accessCode;
+};
+
+const savedCode = getAccessCode();
+console.log(savedCode);
+
+//Global Scope
+
+
+
