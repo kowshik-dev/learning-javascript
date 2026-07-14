@@ -342,3 +342,103 @@ console.log(situation);
 // console.log(finalCharge);
 
 //Third Try
+
+
+//Default Parameters()
+
+//Task 1
+
+// Create an arrow function named calculateRoomCost.
+// Requirements:
+// Parameters: pricePerNight and nights
+// Give nights a default value of 1
+// Return the total cost
+// Call it once with only 2000
+// Call it again with 2000, 3
+// Store and print both results
+
+const calculateRoomCost = (pricePerNight, nights = 1) =>  pricePerNight * nights;
+
+const estimateCost = calculateRoomCost(2000);
+const threeNightCost = calculateRoomCost(2000, 3);
+
+console.log(estimateCost);
+console.log(threeNightCost);
+
+//One Function Calling Another Function
+
+//Task 1
+const calculateBaseSalary = (dailySalary, workingDays) => dailySalary * workingDays;
+
+const addBonous = baseSalary => baseSalary + 2000;
+
+
+const baseSalary = calculateBaseSalary (1000, 20);
+const finalSalary = addBonous(baseSalary);
+
+console.log(finalSalary);
+
+//Task 2
+const calculateTotalPage = (chapters, pagesPerChapter) => chapters * pagesPerChapter;
+const calculateprintingCost = (totalPages, costPerPage) => totalPages * costPerPage;
+
+const totalPage = calculateTotalPage(8, 25);
+const printingCost = calculateprintingCost(totalPage, 3);
+
+console.log(totalPage);
+console.log(printingCost);
+
+//Task 3
+// Function 1: calculateTotalLiters
+// It should:
+// accept bottleSize and quantity as parameters
+// multiply them
+// return the total litres
+
+// Function 2: calculateWaterCost
+// It should:
+// accept totalLiters and pricePerLiter as parameters
+// multiply them
+// return the total cost
+
+//Use value
+// Bottle size: 1.5 litres
+// Quantity: 6
+// Price per litre: 40 taka
+
+const calculateTotalLiters = (bottleSize, quantity) => bottleSize * quantity;
+const calculateWaterCost = (totalLiters, pricePerLiter) => totalLiters * pricePerLiter;
+
+const totalLiters = calculateTotalLiters(1.5, 6);
+const finalCost = calculateWaterCost(totalLiters, 40);
+
+console.log(totalLiters);
+console.log(finalCost);
+
+//Task 4 Salary with Bonus
+
+// Function 1: calculateBaseSalary
+// It should:
+// accept dailySalary and workingDays
+// multiply them
+// return the base salary
+
+// Function 2: calculateSalaryWithBonus
+// It should:
+// accept dailySalary and workingDays
+// call calculateBaseSalary() inside it
+// store the returned base salary
+// add a 2000 bonus
+// return the final salary
+
+const calculateBaseSAlary = (dailySalary, workingDays) => 
+  dailySalary * workingDays;
+const calculateSalaryWithBonus = (dailySalary, workingDays) => {
+  const baseSAlary = calculateBaseSAlary(dailySalary, workingDays);
+    return baseSAlary + 2000;
+};
+
+const baseSAlary = calculateBaseSAlary(1000, 20);
+const finalSelary = calculateSalaryWithBonus();
+console.log(baseSAlary);
+console.log(finalSalary)
