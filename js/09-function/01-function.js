@@ -487,5 +487,94 @@ console.log(savedCode);
 
 //Global Scope
 
+const stationName = "Kishoregonj Station";  //Gloabal Variable
+
+const getStationMessage = () => {
+  return `welcome to ${stationName}`
+};
+
+const message = getStationMessage();
+console.log(message);
+
+//Task 2
+
+// Create:
+
+// A global variable named country containing "Bangladesh"
+// A function named getOfficeLocation
+// Inside the function, create a local variable named city containing "Dhaka"
+// Return: "Dhaka, Bangladesh"
+// Store and print the returned result
+
+// Do not try to access city outside the function.
 
 
+// methood1
+const country = "Bangladesh";
+
+const getOfficeLocation = () => {
+  const city = "Dhaka";
+  return `${city},${country}`;        //templet literal // make both string cz tecnically function return only 1 value, 
+};
+
+const location = getOfficeLocation();
+console.log(location);
+
+// // // methood2
+// const country = "Bangladesh";
+
+// const getOfficeLocation = () => {
+//   const city = "Dhaka";
+//   return [city,country];                  //array methood
+// };
+
+// const location = getOfficeLocation();
+// console.log(location);
+
+// // // methood3
+// const country = "Bangladesh";
+
+// const getOfficeLocation = () => {
+//   const city = "Dhaka";
+//   return {city:city,                        //object methood
+//           country:country
+//         };  
+// };
+
+// const location = getOfficeLocation();
+// console.log(location);
+
+
+//Function Hosting
+
+
+//task 1 
+const finalAmount = calculateDonation(500, 3);  //The function is called on this first line.
+
+function calculateDonation(amount, donors) {    //functionn body start
+  return amount * donors;  //statement done
+}  //end body
+
+
+console.log(finalAmount);  //it will print but we didnt call the function here.
+
+// task 2
+
+// Answer these:
+
+// Will it work or produce an error?
+// Why?
+// Rewrite it in the correct order.
+// // What will the final output be
+
+// ====
+// const satelliteTravelReport = calculateSatelliteTravel(45, 6);  //function call before declaration  
+
+// const calculateSatelliteTravel = (speedPerHour, travelHours) =>  //function declared with const 
+//   speedPerHour * travelHours; //expression return implicit
+
+// console.log(satelliteTravelReport); //print
+
+// //it got a referanceError cz in arrow functio funtion declared first with const then it should be called .
+
+//====
