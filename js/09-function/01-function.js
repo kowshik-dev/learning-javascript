@@ -558,23 +558,99 @@ function calculateDonation(amount, donors) {    //functionn body start
 
 console.log(finalAmount);  //it will print but we didnt call the function here.
 
-// task 2
 
-// Answer these:
+//Task 2
+  console.log(calculateBonus(2000));   // works — prints 100
 
-// Will it work or produce an error?
-// Why?
-// Rewrite it in the correct order.
-// // What will the final output be
+function calculateBonus(salary) {
+  return salary * 0.05;
+}
 
-// ====
-// const satelliteTravelReport = calculateSatelliteTravel(45, 6);  //function call before declaration  
+//
+const lighthouseSignalRecord = calculateLighthouseSignal(13, 7);
+// calculateLighthouseSignal is a function declaration
+//13,7 are arguement
+//return value will be stored in lighthouseSignalRecord
+// JavaScript prepares the complete function before execution
 
-// const calculateSatelliteTravel = (speedPerHour, travelHours) =>  //function declared with const 
-//   speedPerHour * travelHours; //expression return implicit
+function calculateLighthouseSignal(signalPerMinute, activeMinutes) {
+//signalPerMinute recive 13
+//activeMinutes recive 7
+  return signalPerMinute * activeMinutes;
+//the return statement sends 91 back to the lighthouseSignalRecord
+}
 
-// console.log(satelliteTravelReport); //print
+console.log(lighthouseSignalRecord);  //print 91
 
-// //it got a referanceError cz in arrow functio funtion declared first with const then it should be called .
+//
+const oceanRegionName = "Bay Of Bangla";//Global scope
 
-//====
+function displayOceanRegion(){
+  console.log(oceanRegionName);
+};
+
+displayOceanRegion();
+
+//
+function createResearchCode(){
+  const researchCode = "SEA-4007"
+
+  return researchCode;
+};
+
+const saveResearchCode = createResearchCode();
+console.log(saveResearchCode);
+
+//
+const beaconCodeRecord = generateBeaconCode();
+
+function generateBeaconCode() {
+  return "BC-91";
+}
+
+console.log(beaconCodeRecord);
+
+
+
+//Callback Function 
+//A funtion that is passed as an argument to another function.
+
+//Example
+function makeMsg2(user2) {
+  return `Hello ${user2}`;
+}
+
+function runMsg2(messageMaker2, user2) {
+  return messageMaker2(user2);
+}
+
+const greeting2 = runMsg2(makeMsg2, "Rafi");
+
+console.log(greeting2);
+
+
+
+function makeGreetingA(userNameA) {
+  return `Hello ${userNameA}`;
+}
+
+function showGreetingA(greetingMakerA, userNameB) {
+  return greetingMakerA(userNameB);
+}
+
+const finalGreetingA = showGreetingA(makeGreetingA,"Rafi");
+
+console.log(finalGreetingA);
+
+
+//
+function sumA(numA, numB){
+  return `ans${numA+numB}`;
+};
+
+function multiplyA(sumFuncA, multiplyNum){
+  return sumFuncA(multiplyA);
+};
+
+const resultA = multiplyA(sumA);
+console.log(resultA);
