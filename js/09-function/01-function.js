@@ -633,11 +633,11 @@ console.log(finalGreetingA);
 
 //
 const addTwoNumbers = (firstNumber, secondNumber) => {
-    return firstNumber + secondNumber;
+  return firstNumber + secondNumber;
 };
 
 const doubleNumber = (number, operation) => {
-    return operation(number, number);
+  return operation(number, number);
 };
 
 const answer = doubleNumber(5, addTwoNumbers);
@@ -670,7 +670,6 @@ const callbackAnswerB = doubleValueB(5, addPairB);
 
 console.log(callbackAnswerB); // 10
 
-
 //Task 1
 
 // Write JavaScript code that:
@@ -687,6 +686,140 @@ console.log(callbackAnswerB); // 10
 // Store the final answer in differenceC.
 // Print the answer.
 
-const subtractValuesC = ()
+const subtractValuesC = (firstNumberA, secondNumberB) => {
+  return firstNumberA - secondNumberB;
+};
 
+const runCalculationC = (numberZ, numberY, operationA) => {
+  //2 i create a variable/perameter
+  return operationA(numberZ, numberY); //as usual
+};
 
+const differenceC = runCalculationC(20, 7, subtractValuesC); //for sending function as a perameter
+console.log(differenceC); //ans 13
+
+//Task 2
+
+// Write code with:
+// addValuesD
+// multiplyValuesD
+// runMathD
+// sumResultD
+// productResultD
+
+// Requirements:
+// addValuesD(8, 3)       → 11
+// multiplyValuesD(8, 3)  → 24
+
+// runMathD must receive:
+// firstValueD
+// secondValueD
+// mathOperationD
+
+// Call the same runMathD function twice:
+// Print both results.
+// Do not write the calculation directly inside runMathD. It must call mathOperationD.
+
+const addValuesD = (firstValueD, secondValueD) => firstValueD + secondValueD;
+
+const multiplyValuesD = (firstValueD, secondValueD) =>
+  firstValueD * secondValueD;
+
+const runMathD = (firstValueA, secondValueB, mathOperationD) => {
+  return mathOperationD(firstValueA, secondValueB);
+};
+
+const sumResultD = runMathD(8, 3, addValuesD);
+const productResultD = runMathD(8, 3, multiplyValuesD);
+
+console.log(sumResultD); // 11
+console.log(productResultD); // 24
+
+//Task 3
+
+// Write three arrow functions:
+// addPricesF      → adds two prices
+// subtractPricesF → subtracts the second price from the first
+// runPriceMathF   → receives two prices and one operation function
+
+// Use meaningful parameters:
+// firstPriceF
+// secondPriceF
+// priceOperationF
+
+// Call the runner twice:
+
+const addPricesF = (firstPriceF, secondPriceF) => firstPriceF + secondPriceF;
+
+const subtractPricesF = (firstPriceF, secondPriceF) =>
+  firstPriceF - secondPriceF;
+
+const runPriceMathF = (firstPriceF, secondPriceF, priceOperationF) => {
+  return priceOperationF(firstPriceF, secondPriceF);
+};
+
+const addedPriceF = runPriceMathF(900, 250, addPricesF);
+const reducedPricesF = runPriceMathF(900, 250, subtractPricesF);
+
+console.log(addedPriceF);
+console.log(reducedPricesF);
+
+//
+// Which argument is wrong?
+// Why will it fail?
+// Correct only the function call.
+
+const makeLabelG = (productNameG) => `Product: ${productNameG}`; //function declear
+
+const runLabelG = (labelMakerG, productNameG) => labelMakerG(productNameG); //labelMakerG(productNameG)// Because labelMakerG contains a string, JavaScript tries to call a string like a function.
+
+const productLabelG = runLabelG(makeLabelG, "Keyboard");
+
+console.log(productLabelG);
+
+//Task 3 //Debug
+
+// Correct only the function call and explain why the original fails.
+// const checkStockH = (itemCountH) => itemCountH > 0 ? "Available" : "Out of stock";
+
+// const runStockH = (stockCheckerH, itemCountH) => stockCheckerH(itemCountH);
+
+// const stockStatusH = runStockH(checkStockH(0),0);            //failed cz of this [runStockH(checkStockH(0), 0);]
+
+// console.log(stockStatusH);
+
+//Correct vertion
+const checkStockH = (itemCountH) =>
+  itemCountH > 0 ? "Available" : "Out of stock";
+
+const runStockH = (stockCheckerH, itemCountH) => stockCheckerH(itemCountH);
+
+const stockStatusH = runStockH(checkStockH, 0);
+console.log(stockStatusH);
+
+//Task 4
+
+// Create:
+// applyDiscountJ
+// applyTaxJ
+// runPriceChangeJ
+
+// Requirements:
+// applyDiscountJ(1000) → 900
+// applyTaxJ(1000)      → 1150
+
+// runPriceChangeJ must receive one price and one callback function.
+// Use it twice and print both results.
+
+const applyDiscountJ = (originalPriceJ) => originalPriceJ * 0.9;                                  //function 1 callBack
+
+const applyTaxJ = (originalPriceJ) => originalPriceJ * 1.15;                                      //function 2 callBack
+
+const runPriceChangeJ = (originalPriceJ, priceOperationJ) => priceOperationJ(originalPriceJ);     //Callback runner 
+
+const discountedPriceJ = runPriceChangeJ(1000, applyDiscountJ);                                   //applyDiscountJ → function argument being passed 
+                                                                                                  //priceOperationJ → parameter receiving that function
+const taxedPriceJ = runPriceChangeJ(1000, applyTaxJ);                                             //applyTaxJ → function argument being passed
+
+console.log(discountedPriceJ); // 900
+console.log(taxedPriceJ); // 1150
