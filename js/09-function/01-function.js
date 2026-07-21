@@ -7,54 +7,54 @@ function welcomeUser(userName) {
 welcomeUser("Nadia");
 
 //Single Perameter
-function greetPlayer(playerName){
-  console.log(`Hello, ${playerName}`)
+function greetPlayer(playerName) {
+  console.log(`Hello, ${playerName}`);
 }
 
 greetPlayer("Rafi");
 
 //Multiple Perameter
-function semiFinal(teamA , teamB ){
-  console.log(`${teamA} VS ${teamB}`)
+function semiFinal(teamA, teamB) {
+  console.log(`${teamA} VS ${teamB}`);
 }
 
-semiFinal( "Brazil", "Argentina");
+semiFinal("Brazil", "Argentina");
 
 //Function Declearation
 //Task 1
-function showBooking(guestName, roomNumber){
+function showBooking(guestName, roomNumber) {
   console.log(`${guestName} booked room ${roomNumber}`);
 }
 
 showBooking("Nadia", 405);
 
 //Task 2
-function reportWeather(cityName, temperature){
+function reportWeather(cityName, temperature) {
   console.log(`${cityName} temperature is ${temperature}`);
 }
 
 reportWeather("Sylhet", "28*C");
 
 //return //task1
-function calculateTripCost(ticketPrice, passengers){
-  return ticketPrice*passengers;
+function calculateTripCost(ticketPrice, passengers) {
+  return ticketPrice * passengers;
 }
-const totalCost = calculateTripCost(750,4);
+const totalCost = calculateTripCost(750, 4);
 console.log(`Total trip cost is ${totalCost}`);
 
 //task2
-function calculateStorage(fileSize, numberOfFiles){
-  return fileSize*numberOfFiles;
+function calculateStorage(fileSize, numberOfFiles) {
+  return fileSize * numberOfFiles;
 }
 const totalStorage = calculateStorage(200, 5);
 console.log(`Total storage required is ${totalStorage} MB`);
 
 //Regular Function
-function calculatePower(voltage, current){
-  return voltage*current;
+function calculatePower(voltage, current) {
+  return voltage * current;
 }
 
-const power = calculatePower(220,5);
+const power = calculatePower(220, 5);
 console.log(`${power} watts`);
 
 //task 3
@@ -97,17 +97,16 @@ console.log(`Total printing cost: ${cost} BDT`);
 // Store the returned result in a variable.
 // Print: Exam result: Passed
 
-function checkExamResult (marks){
-  if( marks >= 50 ){
+function checkExamResult(marks) {
+  if (marks >= 50) {
     return "Passed";
   } else {
-    return "Failed"
+    return "Failed";
   }
 }
 
 const checkResult = checkExamResult(72);
 console.log(`Exam result: ${checkResult}`);
-
 
 //Anonymous Function
 //Task 1
@@ -117,7 +116,7 @@ function checkPassport(passportNumber) {
 }
 checkPassport("BD-9087");
 
-//Task 2 
+//Task 2
 //Create an anonymous function named checkBoardingPass.
 // It should:
 // accept passengerName and gateNumber
@@ -125,7 +124,7 @@ checkPassport("BD-9087");
 // use a template literal
 // be called with "Nadia" and 7
 
-const checkBoardingPass = function (passengerName, gateNumber){
+const checkBoardingPass = function (passengerName, gateNumber) {
   console.log(`${passengerName}, process to gate ${gateNumber}`);
 };
 checkBoardingPass("Nadia", 7);
@@ -141,11 +140,11 @@ checkBoardingPass("Nadia", 7);
 // print that variable
 // Call it using 1500 and 1200.
 
-const checkBudget = function(budget, itemPrice){
-
-  if (budget >= itemPrice){
+const checkBudget = function (budget, itemPrice) {
+  if (budget >= itemPrice) {
     return "You can buy it";
-  } else { return "Not enough money";
+  } else {
+    return "Not enough money";
   }
 };
 
@@ -164,16 +163,16 @@ console.log(result);
 // Store the returned message in a variable.
 // Print that variable.
 
-const checkBattery = function (batteryLevel){
-  if (batteryLevel >= 20){
+const checkBattery = function (batteryLevel) {
+  if (batteryLevel >= 20) {
     return "Battery level is safe";
-  } else {return "Charge your device";
+  } else {
+    return "Charge your device";
   }
 };
 
 const check = checkBattery(15);
 console.log(check);
-
 
 //Arrow Function
 
@@ -189,7 +188,6 @@ const calculateMealCost = (mealPrice, numberOfMeal) => {
 
 const totalMealCost = calculateMealCost(250, 4);
 console.log(`Total meal cost ${totalMealCost} BDT`);
-
 
 // Task 2 — Independent Practice
 
@@ -219,21 +217,20 @@ console.log(`Total parking fee: ${totalFee} BDT`);
 // Store and print the returned result.
 
 const checkAltitude = (altitude) => {
-  if( altitude >= 3000 ) {
-    return "High altitude warning"
-  } else { return "Altitude is safe"
+  if (altitude >= 3000) {
+    return "High altitude warning";
+  } else {
+    return "Altitude is safe";
   }
 };
 
 const checkingResult = checkAltitude(3500);
 console.log(checkingResult);
 
-//Arrow Function: Implicit Return  
+//Arrow Function: Implicit Return
 //when func contain onle 1 expression,
 //remove //{}
 //remove //return (keyword)
-
-
 
 //Task 1 — Independent Practice
 
@@ -249,7 +246,6 @@ const calculateSolarEnargy = (panelOutput, hours) => panelOutput * hours;
 const reportOfEnergy = calculateSolarEnargy(300, 5);
 console.log(`Total energy: ${reportOfEnergy}`);
 
-
 //Arrow Function Topic: One Parameter
 
 //Task 1
@@ -261,7 +257,7 @@ console.log(`Total energy: ${reportOfEnergy}`);
 // call it with 7
 // store and print the result.
 
-const convertDaysToHours = days => days * 24;
+const convertDaysToHours = (days) => days * 24;
 const convertValue = convertDaysToHours(7);
 console.log(convertValue);
 
@@ -286,7 +282,6 @@ console.log(launchStatus);
 const getVaultStatus = () => "Vault is secure";
 const situation = getVaultStatus();
 console.log(situation);
-
 
 //Task 3 Harder Arrow Function Challenge
 
@@ -343,7 +338,6 @@ console.log(situation);
 
 //Third Try
 
-
 //Default Parameters()
 
 //Task 1
@@ -357,7 +351,7 @@ console.log(situation);
 // Call it again with 2000, 3
 // Store and print both results
 
-const calculateRoomCost = (pricePerNight, nights = 1) =>  pricePerNight * nights;
+const calculateRoomCost = (pricePerNight, nights = 1) => pricePerNight * nights;
 
 const estimateCost = calculateRoomCost(2000);
 const threeNightCost = calculateRoomCost(2000, 3);
@@ -368,19 +362,21 @@ console.log(threeNightCost);
 //One Function Calling Another Function
 
 //Task 1
-const calculateBaseSalary = (dailySalary, workingDays) => dailySalary * workingDays;
+const calculateBaseSalary = (dailySalary, workingDays) =>
+  dailySalary * workingDays;
 
-const addBonous = baseSalary => baseSalary + 2000;
+const addBonous = (baseSalary) => baseSalary + 2000;
 
-
-const baseSalary = calculateBaseSalary (1000, 20);
+const baseSalary = calculateBaseSalary(1000, 20);
 const finalSalary = addBonous(baseSalary);
 
 console.log(finalSalary);
 
 //Task 2
-const calculateTotalPage = (chapters, pagesPerChapter) => chapters * pagesPerChapter;
-const calculateprintingCost = (totalPages, costPerPage) => totalPages * costPerPage;
+const calculateTotalPage = (chapters, pagesPerChapter) =>
+  chapters * pagesPerChapter;
+const calculateprintingCost = (totalPages, costPerPage) =>
+  totalPages * costPerPage;
 
 const totalPage = calculateTotalPage(8, 25);
 const printingCost = calculateprintingCost(totalPage, 3);
@@ -407,7 +403,8 @@ console.log(printingCost);
 // Price per litre: 40 taka
 
 const calculateTotalLiters = (bottleSize, quantity) => bottleSize * quantity;
-const calculateWaterCost = (totalLiters, pricePerLiter) => totalLiters * pricePerLiter;
+const calculateWaterCost = (totalLiters, pricePerLiter) =>
+  totalLiters * pricePerLiter;
 
 const totalLiters = calculateTotalLiters(1.5, 6);
 const finalCost = calculateWaterCost(totalLiters, 40);
@@ -431,29 +428,29 @@ console.log(finalCost);
 // add a 2000 bonus
 // return the final salary
 
-const calculateBaseSAlary = (dailySalary, workingDays) => 
+const calculateBaseSAlary = (dailySalary, workingDays) =>
   dailySalary * workingDays;
 const calculateSalaryWithBonus = (dailySalary, workingDays) => {
   const baseSAlary = calculateBaseSAlary(dailySalary, workingDays);
-    return baseSAlary + 2000;
+  return baseSAlary + 2000;
 };
 
 const baseSAlary = calculateBaseSAlary(1000, 20);
 const finalSelary = calculateSalaryWithBonus();
 console.log(baseSAlary);
-console.log(finalSalary)
-
+console.log(finalSalary);
 
 //Function Scoop
 //Local Scope
 
-//Task 1 
-const showStatus = () => {         //body start //() er pore nicher return ekhane ashbe.
-  const status = "System Online";  //localScoop create korlam inside body
-  return status;                   //{body} theke ber korte return korlam //return value {body} er bahire jabe function () nicher tay; 
-};                                 //body end
+//Task 1
+const showStatus = () => {
+  //body start //() er pore nicher return ekhane ashbe.
+  const status = "System Online"; //localScoop create korlam inside body
+  return status; //{body} theke ber korte return korlam //return value {body} er bahire jabe function () nicher tay;
+}; //body end
 
-const finalStatus = showStatus();  //return value inSide the fnction now also () call the funtion
+const finalStatus = showStatus(); //return value inSide the fnction now also () call the funtion
 console.log(finalStatus);
 
 //Task 2
@@ -487,10 +484,10 @@ console.log(savedCode);
 
 //Global Scope
 
-const stationName = "Kishoregonj Station";  //Gloabal Variable
+const stationName = "Kishoregonj Station"; //Gloabal Variable
 
 const getStationMessage = () => {
-  return `welcome to ${stationName}`
+  return `welcome to ${stationName}`;
 };
 
 const message = getStationMessage();
@@ -508,13 +505,12 @@ console.log(message);
 
 // Do not try to access city outside the function.
 
-
 // methood1
 const country = "Bangladesh";
 
 const getOfficeLocation = () => {
   const city = "Dhaka";
-  return `${city},${country}`;        //templet literal // make both string cz tecnically function return only 1 value, 
+  return `${city},${country}`; //templet literal // make both string cz tecnically function return only 1 value,
 };
 
 const location = getOfficeLocation();
@@ -538,29 +534,26 @@ console.log(location);
 //   const city = "Dhaka";
 //   return {city:city,                        //object methood
 //           country:country
-//         };  
+//         };
 // };
 
 // const location = getOfficeLocation();
 // console.log(location);
 
-
 //Function Hosting
 
+//task 1
+const finalAmount = calculateDonation(500, 3); //The function is called on this first line.
 
-//task 1 
-const finalAmount = calculateDonation(500, 3);  //The function is called on this first line.
+function calculateDonation(amount, donors) {
+  //functionn body start
+  return amount * donors; //statement done
+} //end body
 
-function calculateDonation(amount, donors) {    //functionn body start
-  return amount * donors;  //statement done
-}  //end body
-
-
-console.log(finalAmount);  //it will print but we didnt call the function here.
-
+console.log(finalAmount); //it will print but we didnt call the function here.
 
 //Task 2
-  console.log(calculateBonus(2000));   // works — prints 100
+console.log(calculateBonus(2000)); // works — prints 100
 
 function calculateBonus(salary) {
   return salary * 0.05;
@@ -574,29 +567,29 @@ const lighthouseSignalRecord = calculateLighthouseSignal(13, 7);
 // JavaScript prepares the complete function before execution
 
 function calculateLighthouseSignal(signalPerMinute, activeMinutes) {
-//signalPerMinute recive 13
-//activeMinutes recive 7
+  //signalPerMinute recive 13
+  //activeMinutes recive 7
   return signalPerMinute * activeMinutes;
-//the return statement sends 91 back to the lighthouseSignalRecord
+  //the return statement sends 91 back to the lighthouseSignalRecord
 }
 
-console.log(lighthouseSignalRecord);  //print 91
+console.log(lighthouseSignalRecord); //print 91
 
 //
-const oceanRegionName = "Bay Of Bangla";//Global scope
+const oceanRegionName = "Bay Of Bangla"; //Global scope
 
-function displayOceanRegion(){
+function displayOceanRegion() {
   console.log(oceanRegionName);
-};
+}
 
 displayOceanRegion();
 
 //
-function createResearchCode(){
-  const researchCode = "SEA-4007"
+function createResearchCode() {
+  const researchCode = "SEA-4007";
 
   return researchCode;
-};
+}
 
 const saveResearchCode = createResearchCode();
 console.log(saveResearchCode);
@@ -610,9 +603,7 @@ function generateBeaconCode() {
 
 console.log(beaconCodeRecord);
 
-
-
-//Callback Function 
+//Callback Function
 //A funtion that is passed as an argument to another function.
 
 //Example
@@ -628,8 +619,6 @@ const greeting2 = runMsg2(makeMsg2, "Rafi");
 
 console.log(greeting2);
 
-
-
 function makeGreetingA(userNameA) {
   return `Hello ${userNameA}`;
 }
@@ -638,19 +627,66 @@ function showGreetingA(greetingMakerA, userNameB) {
   return greetingMakerA(userNameB);
 }
 
-const finalGreetingA = showGreetingA(makeGreetingA,"Rafi");
+const finalGreetingA = showGreetingA(makeGreetingA, "Rafi");
 
 console.log(finalGreetingA);
 
-
 //
-function sumA(numA, numB){
-  return `ans${numA+numB}`;
+const addTwoNumbers = (firstNumber, secondNumber) => {
+    return firstNumber + secondNumber;
 };
 
-function multiplyA(sumFuncA, multiplyNum){
-  return sumFuncA(multiplyA);
+const doubleNumber = (number, operation) => {
+    return operation(number, number);
 };
 
-const resultA = multiplyA(sumA);
-console.log(resultA);
+const answer = doubleNumber(5, addTwoNumbers);
+
+console.log(answer);
+
+//Normal arrow-function version
+const addPairA = (firstValueA, secondValueA) => {
+  return firstValueA + secondValueA;
+};
+
+const doubleValueA = (numberA) => {
+  return addPairA(numberA, numberA);
+};
+
+const directAnswerA = doubleValueA(5);
+
+console.log(directAnswerA); // 10
+
+//Callback arrow-function version
+const addPairB = (firstValueB, secondValueB) => {
+  return firstValueB + secondValueB;
+};
+
+const doubleValueB = (numberB, mathOperationB) => {
+  return mathOperationB(numberB, numberB);
+};
+
+const callbackAnswerB = doubleValueB(5, addPairB);
+
+console.log(callbackAnswerB); // 10
+
+
+//Task 1
+
+// Write JavaScript code that:
+
+// Creates an arrow function named subtractValuesC that subtracts the second number from the first.
+// Creates another arrow function named runCalculationC that receives:
+// two numbers
+// one function
+// Inside runCalculationC, call the received function using the two numbers.
+// Call runCalculationC with:
+// 20
+// 7
+// subtractValuesC
+// Store the final answer in differenceC.
+// Print the answer.
+
+const subtractValuesC = ()
+
+
