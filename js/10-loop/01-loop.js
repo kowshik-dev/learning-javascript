@@ -309,3 +309,22 @@ for (const currentOrderW of orderValuesW){
 }
 console.log(largeOrderCountW);
 console.log(largeOrderTotalW );// 5, 530 and yessssssss i did it man!
+
+
+
+//forEach() loop
+
+
+//regular
+const pricesX = [100, 200, 300];
+
+for (const currentPriceX of pricesX) {
+  console.log(currentPriceX);
+}
+
+//forEach
+const pricesX = [100, 200, 300];
+
+pricesX.forEach((currentPriceX) => {
+  console.log(currentPriceX);
+});
