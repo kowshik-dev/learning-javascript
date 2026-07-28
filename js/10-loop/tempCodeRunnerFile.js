@@ -1,5 +1,7 @@
-[100, 200, 300];
+ = [28, 35, 30, 40, 25];
 
-// for (const currentPriceX of pricesX) {
-//   console.log(currentPriceX);
-// }
+// const heighestTemperature = temperaturesAF.filter((temperature) => {
+//   return temperaturesAF >= 30;
+// });
+
+// console.log(heighestTemperature);

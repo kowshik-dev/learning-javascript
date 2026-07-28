@@ -360,3 +360,66 @@ texiFare.forEach((currentFare) => {
 });
 
 console.log(fareTotalA);
+
+
+//Topic map()
+
+// map work with array and create a brand new array
+
+const basePricesAB = [100, 200, 300];
+
+const discountedPricesAB = basePricesAB.map((currentPriceAB) => {
+  return currentPriceAB * 0.9;
+});
+
+console.log(discountedPricesAB);
+
+//Task 2
+
+const deliveryFeesAC = [50, 80, 120];
+
+const updateFeesAC = deliveryFeesAC.map((currentFeesAC) => {
+  return currentFeesAC + 10;
+});
+
+console.log(updateFeesAC);
+
+updateFeesAC.forEach((currentUpdatedFeeAC) => {
+  console.log(currentUpdatedFeeAC);
+});
+
+
+//Topic Filter
+
+const temperaturesAF = [28, 35, 30, 40, 25];
+
+const highestTemperature = temperaturesAF.filter((temperature) => {
+  return temperature > 30;
+});
+
+console.log(highestTemperature);
+
+//Task 2
+
+const stockAmountsAG = [0, 12, 5, 0, 8];
+
+const availableStock = stockAmountsAG.filter((stockAG) =>{
+  return stockAG > 0;
+});
+
+console.log(availableStock);
+
+
+//Task 3
+//filter() with strings
+
+const customerNamesAH = ["Rafi", "Nabila", "Sami", "Farhan", "Mia"];
+
+const longnameAH = customerNamesAH.filter((currentNameAH) => {
+  return currentNameAH.length > 4;
+});
+
+console.log(longnameAH);
+
+
+//Loops and Array Iteration → find()
