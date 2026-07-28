@@ -323,8 +323,40 @@ for (const currentPriceX of pricesX) {
 }
 
 //forEach
-const pricesX = [100, 200, 300];
+const pricesZ = [400, 500, 600];
 
-pricesX.forEach((currentPriceX) => {
+pricesZ.forEach((currentPriceX) => {
   console.log(currentPriceX);
 });
+
+//Task 1
+
+const studentNameY = ["Kowshik", "Mawa"];
+
+studentNameY.forEach((currentStudentY) => {
+  console.log(`Student: ${currentStudentY}`);
+});
+
+//Task 2
+
+const cartPriseZ = [120, 90, 200];
+
+let cartTotalZ = 0;
+
+cartPriseZ.forEach((currentPriseZ) => {
+  cartTotalZ += currentPriseZ;
+});
+
+console.log(cartTotalZ);
+
+//Task 3'
+
+const texiFare = [70, 120, 90, 50];
+
+let fareTotalA = 0;
+
+texiFare.forEach((currentFare) => {
+  fareTotalA += currentFare;
+});
+
+console.log(fareTotalA);

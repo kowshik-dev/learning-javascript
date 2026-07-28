@@ -1,3 +1,5 @@
+[100, 200, 300];
 
-
-console.log(totalFareP);
+// for (const currentPriceX of pricesX) {
+//   console.log(currentPriceX);
+// }
