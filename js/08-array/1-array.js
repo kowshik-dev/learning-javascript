@@ -141,3 +141,8 @@ console.log(selectedSignals);  //[ 'Signal-B', 'Signal-C', 'Signal-D' ]
 //toSpliced()  → creates a new array
 //slice()      → copies a selected section
 //copyWithin() → copies items inside the same array
+
+
+
+
+//Rest array topic in the loop section

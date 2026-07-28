@@ -1,45 +1,75 @@
-const iceCreamProduct = {
-  name: "iceCream",
+// Example 1: Create and print an object
+
+const iceCreamProductA = {
+  name: "Ice Cream",
   price: 100,
   inStock: true
 };
 
-console.log(iceCreamProduct);
+console.log(iceCreamProductA);
 
-//Example 
 
-const product = {
-    name: "Ice Cream",
-    price: 1000,
-    inStock: true
+// Example 2: Access a property using dot notation
+
+const dessertProductB = {
+  name: "Ice Cream",
+  price: 1000,
+  inStock: true
 };
 
-console.log(product.inStock);
+console.log(dessertProductB.inStock); // true
 
-//Change the value of Object property via Dot Notation
 
-const products = {
-    name: "Toyota",
-    price: 1000
+// Example 3: Change an object property's value using dot notation
+
+const carProductC = {
+  name: "Toyota",
+  price: 1000
 };
 
-product.price = 2000;
-console.log(product);
+carProductC.price = 2000;
 
-//Add new property via Dot notation
+console.log(carProductC);
 
-const product = {
+
+// Example 4: Add a new property using dot notation
+
+const chocolateProductD = {
   name: "Chocolate"
 };
 
-product.price = 150;
-console.log(product);
+chocolateProductD.price = 150;
 
-// //bracket notation
+console.log(chocolateProductD);
 
-const vahicle = {
-    car: "Toyota",
-    cost: 1000
+
+// Example 5: Access a property using bracket notation
+
+const vehicleInfoE = {
+  car: "Toyota",
+  cost: 1000
 };
 
-console.log(vahicle["car"]);  //Toyota
+console.log(vehicleInfoE["car"]); // Toyota
+
+
+// Topic: Object Essentials → Nested Objects
+
+// Object Essentials
+// → Async JavaScript Basics
+// → DOM Manipulation
+
+// A nested object means:
+// An object inside another object
+
+const studentInfoAR = {
+  name: "Rafi",
+  age: 20,
+
+  result: {
+    subject: "JavaScript",
+    score: 85
+  }
+};
+
+console.log(studentInfoAR.name); // Rafi
