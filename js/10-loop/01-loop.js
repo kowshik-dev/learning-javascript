@@ -484,11 +484,48 @@ console.log(hasStockAO);  //false cz all value didnt match the condition.
 
 const orderPricesAP = [100, 200, 50];
 
-const orderTotalAP = orderPricesAP.reduce(
-  (totalAP, currentPriceAP) => {
+const orderTotalAP = orderPricesAP.reduce((totalAP, currentPriceAP) => {
     return totalAP + currentPriceAP;
   },
   0
 );
 
 console.log(orderTotalAP); // 350
+
+//for...of:
+// running total variable বাইরে তৈরি করতে হয়
+
+// reduce():
+// running total callback-এর accumulator parameter handle করে
+
+// প্রতিটি value শুধু ব্যবহার করতে চাই
+// → forEach()
+
+// প্রতিটি value change করে new array চাই
+// → map()
+
+// কিছু values select করে new array চাই
+// → filter()
+
+// প্রথম matching value চাই
+// → find()
+
+// একটি match আছে কি না
+// → some()
+
+// সব values match করে কি না
+// → every()
+
+// সব values combine করে one final result চাই
+// → reduce()
+
+// Task 2
+
+const deliveryCostsAQ = [60, 120, 80, 40];
+
+const totalDeliveryCostAQ = deliveryCostsAQ.reduce((totalCost, currentCostAQ) => {
+  return totalCost  + currentCostAQ;
+}, 
+0);
+
+console.log(totalDeliveryCostAQ);
