@@ -423,3 +423,72 @@ console.log(longnameAH);
 
 
 //Loops and Array Iteration → find()
+//find() returns the first value that matches a condition.
+
+const productPricesAJ = [80, 150, 220, 90];
+
+const firstLargePriceAJ = productPricesAJ.find((currentPriceAJ) => {
+  return currentPriceAJ >= 100;
+});
+
+console.log(firstLargePriceAJ); // 150
+
+//Task 1
+
+const scoresAK = [45, 65, 72, 90, 80];
+
+const firstScoreAK = scoresAK.find((currentScoreAK) => {
+  return currentScoreAK >= 70;
+});
+
+console.log(firstScoreAK);
+
+
+//Topic: Loops and Array Iteration → some()
+//some() checks whether at least one value matches a condition. It returns only: true or false
+//its stop when the first true gets
+
+const stockLevelsAL = [0, 0, 5, 0];
+
+const hasAvailableStockAL = stockLevelsAL.some((currentStockAL) => {
+  return currentStockAL > 0;
+});
+
+console.log(hasAvailableStockAL); // true
+
+//Task 2
+
+const agesAM = [14, 16, 19, 15];
+
+const adultAM = agesAM.some((exampleAge) => {
+  return exampleAge >= 18;
+});
+
+console.log(adultAM);  //true
+
+
+//Topic: Loops and Array Iteration → every()
+// every() checks whether all values match the condition.
+
+const stockLevelsAO = [5, 8, 3, 10];
+
+const hasStockAO = stockLevelsAO.every((currentStockAO) => {
+  return currentStockAO >= 4;
+});
+
+console.log(hasStockAO);  //false cz all value didnt match the condition. 
+
+
+//Topic: Loops and Array Iteration → reduce()
+// reduce() array-এর সব values process করে শেষে একটি single result তৈরি করে।
+
+const orderPricesAP = [100, 200, 50];
+
+const orderTotalAP = orderPricesAP.reduce(
+  (totalAP, currentPriceAP) => {
+    return totalAP + currentPriceAP;
+  },
+  0
+);
+
+console.log(orderTotalAP); // 350
