@@ -136,4 +136,165 @@ console.log(bookingInfoAU.guest.city);
 console.log(bookingInfoAU.payment.amount);
 
 
-//
+//Topic: Object Essentials → Arrays of Objects
+// Real applications usually store multiple users, products, or orders as objects inside an array.
+
+//Task 1
+const productListAV = [
+  {
+    name: "Keyboard",
+    price: 1200
+  },
+  {
+    name: "Mouse",
+    price: 700
+  },
+  {
+    name: "Monitor",
+    price: 15000
+  }
+];
+
+console.log(productListAV[0]);
+console.log(productListAV[2]);
+console.log(productListAV[1].name);
+
+//Task 2
+const studentListAW = [
+  {
+    name: "Rafi",
+    score: 73
+  },
+  {
+    name: "Nabila",
+    score: 90
+  },
+  {
+    name: "Sami",
+    score:82
+  }
+];
+
+console.log(studentListAW[1].name);
+console.log(studentListAW[1].score);  //90
+
+//Updating an Object Inside an Array
+
+studentListAW[1].score = 95;
+console.log(studentListAW[1].score); // 95
+
+
+//Task 2
+const shopProductsAX = [
+  {
+    name: "Mouse",
+    price: 700,
+    inStock: true
+  },
+  {
+    name: "Keyboard",
+    price: 1200,
+    inStock: true
+  },
+  {
+    name: "Monitor",
+    price: 15000,
+    inStock: true
+  }
+];
+
+shopProductsAX[1].price = 1500;
+shopProductsAX[1].inStock = false;
+
+console.log(shopProductsAX[1].price);
+console.log(shopProductsAX[1].inStock);
+
+
+//Topic: Object Essentials → Array Methods with Objects
+//find()
+
+const inventoryAY = [
+  { name: "Laptop", price: 50000 },
+  { name: "Mouse", price: 800 },
+  { name: "Keyboard", price: 1500 }
+];
+
+const foundMouseAY = inventoryAY.find((currentProductAY) => {
+  return currentProductAY.name === "Mouse";
+});
+
+console.log(foundMouseAY);
+console.log(foundMouseAY.price); // 800
+
+
+//Task 2
+const deviceListAZ = [
+  { name: "Speaker", price: 2500 },
+  { name: "Monitor", price: 18000 },
+  { name: "Webcam", price: 3200 }
+];
+
+const foundMonitor = deviceListAZ.find((currentDeviceList) => {
+  return currentDeviceList.name === "Monitor";
+});
+
+console.log(foundMonitor.price);
+
+
+//Task 3
+//filter() with Objects
+const courseListBA = [
+  { name: "HTML", completed: true },
+  { name: "JavaScript", completed: false },
+  { name: "CSS", completed: true }
+];
+
+const completedCoursesBA = courseListBA.filter((currentCourseBA) => {
+  return currentCourseBA.completed === true;
+});
+
+console.log(completedCoursesBA);
+
+//Task 4
+const storeItemsBB = [
+  { name: "Mouse", price: 700 },
+  { name: "Keyboard", price: 1500 },
+  { name: "Monitor", price: 18000 },
+  { name: "Cable", price: 400 }
+];
+
+const costlyItems = storeItemsBB.filter((currentItem) => {
+  return currentItem.price > 1000;
+});
+
+console.log(costlyItems);
+
+
+//Task 5
+// map() with Objects
+
+const employeeListBC = [
+  { name: "Rafi", salary: 30000 },
+  { name: "Nabila", salary: 40000 },
+  { name: "Sami", salary: 35000 }
+];
+
+const employeeNamesBC = employeeListBC.map((currentEmployeeBC) => {
+  return currentEmployeeBC.name;
+});
+
+console.log(employeeNamesBC);
+
+//Task 6
+const courseListBD = [
+  { title: "HTML", duration: 10 },
+  { title: "CSS", duration: 15 },
+  { title: "JavaScript", duration: 30 }
+];
+
+const courseTiteles = courseListBD.map((currentCourse) => {
+  return currentCourse.title;
+});
+
+console.log(courseTiteles);
+
