@@ -73,3 +73,67 @@ const studentInfoAR = {
 };
 
 console.log(studentInfoAR.name); // Rafi
+
+//Task 2
+
+const customerOrderAS = {
+  orderId: 501,
+
+  customer: {
+    name: "Nabila",
+    city: "Dhaka"
+  },
+
+  payment: {
+    method: "Cash",
+    amount: 1200
+  }
+};
+
+console.log(customerOrderAS.customer.city);
+console.log(customerOrderAS.payment.amount);
+
+
+//Topic: Object Essentials → Updating Nested Properties
+//A nested property can be updated using its complete access path.
+
+
+//Task 1
+const delivaryOrderAT = {
+  customer: {
+    name: "Kowshik",
+    city: "Dhaka",
+  },
+
+  payment: {
+    amount: 800,
+    status: "Pending"
+  }
+};
+
+delivaryOrderAT.payment.status = "Paid";
+
+console.log(delivaryOrderAT.payment.status);
+
+
+//Task 2
+const bookingInfoAU = {
+  guest: {
+    name: "Nabila",
+    city: "Dhaka"
+  },
+
+  payment: {
+    method: "Card",
+    amount: 1000
+  }
+};
+
+bookingInfoAU.guest.city = "Chattogram";
+bookingInfoAU.payment.amount = 1500;
+
+console.log(bookingInfoAU.guest.city);
+console.log(bookingInfoAU.payment.amount);
+
+
+//
