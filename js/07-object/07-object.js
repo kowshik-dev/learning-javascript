@@ -298,3 +298,35 @@ const courseTiteles = courseListBD.map((currentCourse) => {
 
 console.log(courseTiteles);
 
+
+//Object Methods
+// An object method is a function that belongs to an object and can use that object’s properties.
+
+
+//Task 1
+const laptopProductBG = {
+  name: "Laptop",
+  price: 50000,
+
+  showPriceBG: function () {
+    return this.name + " costs " + this.price;
+  }
+};
+
+console.log(laptopProductBG.showPriceBG());
+
+
+//Task 2
+const phoneProductBI = {
+  name: "Samsung Phone",
+  price: 45000,
+
+  showDetailsBI: function() {
+    return this.name + " costs " + this.price;
+  }
+};
+
+console.log(phoneProductBI.showDetailsBI());
+
+
+
