@@ -110,7 +110,7 @@ orderPromise
 //Task 2
 
 // Promise creation
-const parcelPromise = new Promise((resolve, reject) => {
+const parcelPromise = new Promise((resolve, reject) => {         //new Promise(...) → produces the future result
     const percelDelivered = true;
 
     if(percelDelivered) {
@@ -122,10 +122,161 @@ const parcelPromise = new Promise((resolve, reject) => {
 
 // Promise consumption
 parcelPromise
+.then((successMessage) => {                                     //.then()/.catch() → consumes and handles that result
+    console.log(successMessage);
+})
+
+.catch((errorMessage) => {
+    console.log(errorMessage);
+});
+
+
+ //Task 3
+
+const productList = new Promise((resolve, reject) => {
+ let productsAvaoilable = false;
+
+    if (productsAvaoilable) {
+      resolve("Products are available");
+    } else {
+      reject("No products available");
+    }
+  });
+
+  productList
+    .then((messageTrue) => {
+      console.log(messageTrue);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+
+// //Task 4
+const users = new Promise((resolve, reject) => {
+    const userLoggedIn = true;
+
+    if (userLoggedIn) {
+        resolve ("Wellcome Back Alise!");
+    } else {
+        reject ("Please log in to first");
+    }
+});
+
+users
+.then((messageTrue) => {
+    console.log(messageTrue);
+})
+.catch((error) => {
+    console.log(error);
+});
+
+
+// Task 5
+const myPromise = new Promise((resolve, reject) => {
+  resolve("Promise completed!");
+});
+
+myPromise.then((data) => {
+  console.log(data);
+});
+
+const studentPromise = new Promise((resolve, reject) => {
+    resolve("Stuent registered successfully!");
+});
+
+studentPromise.then((status) => {
+    console.log(status);
+});
+
+//  == setTimeout == Promise
+
+//Task 6
+const dataPromise = new Promise((resolve, reject) => {
+
+    console.log("Fetching data...");
+
+    setTimeout(() => {
+        resolve("Data received successfully!");
+    }, 3000);
+
+});
+
+dataPromise
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => {
+    console.log(error);
+});
+
+
+// //Task 7
+const downloadPromise =  new Promise((resolve, reject) => {
+    console.log("Downloading file...");
+
+    setTimeout(() => {
+        resolve("File downloaded successfully!");
+    },2000);
+});
+
+downloadPromise 
 .then((successMessage) => {
     console.log(successMessage);
 })
 
 .catch((errorMessage) => {
     console.log(errorMessage);
+});
+
+
+// //Task 8
+
+const loginPromise = new Promise((resolve, reject) => {
+    console.log("Checking login...");
+
+    setTimeout(() => {
+
+        let loginSuccess = true;
+
+        if(loginSuccess) {
+            resolve("Welcome User!");
+        } else {
+            reject("Login failed!");
+        }
+    },2000);
+});
+
+loginPromise
+.then((successLogin) => {
+    console.log(successLogin);
+})
+
+.catch((errorLogin) => {
+    console.log(errorLogin);
+});
+
+
+// // ===Promise Chaining===
+
+// // Task 9
+const loginPromiseZ = new Promise((resolve, reject) => {
+
+    resolve("Login successful!");
+
+});
+
+
+loginPromiseZ
+.then((message) => {
+
+    console.log(message);
+
+    return "User data loaded!";
+
+})
+.then((userData) => {
+
+    console.log(userData);
+
 });
