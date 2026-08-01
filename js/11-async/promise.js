@@ -346,7 +346,7 @@ loginUser
 
 
 
-// // Task 2
+// // Task 12
 const buyProduct = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve("Product perchased!");
@@ -376,4 +376,70 @@ buyProduct
 
 .then((thirdMessage) => {
     console.log(thirdMessage);
+});
+
+
+// // ===Fetch API + Promise ===
+
+// // fetch() sends a request to a server.
+
+
+// // Task 13
+
+fetch("https://jsonplaceholder.typicode.com/users/1")  // fetch() itself returns a Promise.
+
+.then((response) => {  //inside response there are data from server by promise === but not directly useable yet. 
+
+    return response.json(); //Because server sends data as JSON format. .json() also returns a Promise.
+
+})
+
+.then((userData) => {    //for recive actual data from promise. kinda extract and open
+
+    console.log(userData);
+
+})
+
+.catch((error) => {
+
+    console.log(error);
+
+});
+
+
+// // Task 14
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+
+.then((response) => {
+    return response.json();
+})
+
+.then((userData) => {
+    console.log (userData);
+})
+
+.catch((error) => {
+    console.log(error);
+});
+
+
+// // Task 15
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+
+.then((response) => {
+
+    if(!response.ok){
+        throw new Error("Something went wrong");
+    }
+
+    return response.json();
+
+})
+
+.then((data) => {
+    console.log(data);
+})
+
+.catch((error) => {
+    console.log(error.message);
 });
