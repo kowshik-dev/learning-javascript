@@ -280,3 +280,100 @@ loginPromiseZ
     console.log(userData);
 
 });
+
+
+// //Task 10
+const orderPromiseE = new Promise((resolve, reject) => {
+    resolve("Order Placed!");
+});
+
+orderPromiseE
+.then((message) => {
+    console.log(message);
+
+    return "Preparing your order....";
+})
+.then((processingMessage) => {
+    console.log(processingMessage);
+});
+
+
+// // ===Promise chaining with multiple async operations===
+
+
+// // Task 11
+const loginUser = new Promise((resolve, reject) => {
+
+    setTimeout(() => {
+        resolve("User logged in");
+    }, 1000);
+
+});
+
+
+loginUser
+.then((message) => {
+
+    console.log(message);
+
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+            resolve("User ID: 101");
+        }, 4000);
+
+    });
+
+})
+.then((userId) => {
+
+    console.log(userId);
+
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+            resolve("Profile loaded");
+        }, 5000);
+
+    });
+
+})
+.then((profile) => {
+
+    console.log(profile);
+
+});
+
+
+
+// // Task 2
+const buyProduct = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Product perchased!");
+    },6000);
+});
+
+buyProduct
+.then((message) => {
+    console.log(message);
+
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Payment completed!");
+        },7000);
+    });
+})
+
+.then((secondMessage) => {
+    console.log(secondMessage);
+
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Product shipped");
+        },8000);
+    });
+})
+
+.then((thirdMessage) => {
+    console.log(thirdMessage);
+});
