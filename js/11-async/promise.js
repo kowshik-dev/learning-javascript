@@ -346,7 +346,7 @@
 
 
 
-// // // Task 12
+// // Task 12
 // const buyProduct = new Promise((resolve, reject) => {
 //     setTimeout(() => {
 //         resolve("Product perchased!");
@@ -463,11 +463,31 @@
 //     console.log(error);
 // });
 
+
+//Task 17
+// fetch("https://jsonplaceholder.typicode.com/posts/1")
+//   .then((response) => {
+//     if (!response.ok) {
+//       throw new Error("Something went wrong");  //new Error() creates an Error object.
+//     }                                           
+//     return response.json();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     console.log(error.message);
+//   });
+
+
+// Task 18
 fetch("https://jsonplaceholder.typicode.com/posts/1")
   .then((response) => {
     if (!response.ok) {
-      throw new Error("Something went wrong");  //new Error() creates an Error object.
-    }                                           The Error object contains:
+      return Promise.reject(
+        new Error("Something went wrong")
+      );
+    }
 
     return response.json();
   })
@@ -479,3 +499,18 @@ fetch("https://jsonplaceholder.typicode.com/posts/1")
   });
 
 
+//   Task 19
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then((response) => {
+    if (!response.ok) {
+      console.log("Something went wrong");
+      return;
+    }
+
+    return response.json();
+  })
+  .then((data) => {
+    if (data) {
+      console.log(data);
+    }
+  });
